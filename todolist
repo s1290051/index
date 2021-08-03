@@ -1,0 +1,25 @@
+let input = document.getElementById("input")
+let goB = document.getElementById("goButton");
+const deleteB = document.getElementById("deleteButton");
+const divElement = document.getElementById("element");
+
+function printT() {
+  let newDiv = document.createElement("div")
+  newDiv.textContent = input.value
+  console.log(newDiv)
+
+  divElement.appendChild(newDiv)
+}
+goB.addEventListener("click", printT);
+
+function deleteT() {
+  const child = divElement.children;
+  for (let i = 0; i < child.length; i++) {
+    if (child[i].textContent === input.value) {
+      child[i].remove();
+    }
+  }
+
+}
+
+deleteB.addEventListener("click", deleteT);
