@@ -7,3 +7,6 @@
 value="delete">
 <div id="element"></div>
 </div>
+<body>
+<script src="index.html"></script>
+</body>
